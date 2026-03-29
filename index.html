@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Course Finder — Discover 150+ Free Courses & Certifications</title>
+  <title>Free Course Finder — Discover 230+ Free Courses & Certifications</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -134,6 +134,94 @@
       backdrop-filter: blur(8px);
     }
     .theme-toggle:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
+
+    /* ── Creator Badge ── */
+    .creator-badge {
+      margin-top: 14px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.3px;
+      user-select: none;
+      pointer-events: none;
+    }
+    .creator-badge strong { color: rgba(255,255,255,0.95); font-weight: 700; }
+
+    /* ── Smart Update Button ── */
+    .btn-smart-update {
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1.5px solid var(--green);
+      border-radius: var(--radius-xs);
+      background: var(--green-bg);
+      color: var(--green);
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .btn-smart-update:hover { background: var(--green); color: #fff; }
+    .btn-smart-update:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* ── Update Notification Bar ── */
+    .update-bar {
+      display: none;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .update-bar.visible { display: flex; }
+    .update-bar button {
+      padding: 4px 14px;
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: inherit;
+      margin-left: 8px;
+    }
+    .update-bar button:hover { background: rgba(255,255,255,0.4); }
+
+    /* ── Update Modal Content ── */
+    .update-list { list-style: none; padding: 0; margin: 12px 0; }
+    .update-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xs);
+      margin-bottom: 8px;
+      background: var(--bg-card);
+      font-size: 13px;
+    }
+    .update-item .info { flex: 1; }
+    .update-item .title { font-weight: 700; color: var(--text-primary); }
+    .update-item .provider { font-size: 12px; color: var(--accent); }
+    .update-item .desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .update-item button {
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      align-self: center;
+    }
+    .btn-add-course { background: var(--green); color: #fff; }
+    .btn-remove-course { background: var(--red); color: #fff; }
+    .btn-undo-course { background: var(--orange); color: #fff; }
 
     /* ── Stats Bar ── */
     .stats-bar {
@@ -634,6 +722,223 @@
       100% { opacity: 0.6; }
     }
 
+    /* ── AI Recommender FAB ── */
+    .ai-fab {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+      z-index: 100;
+      transition: all var(--transition);
+    }
+    .ai-fab:hover { transform: scale(1.12); box-shadow: 0 6px 28px rgba(124,58,237,0.55); }
+
+    /* ── Modal Overlay ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 600px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+      color: #fff;
+    }
+    .modal-header h3 { font-size: 16px; font-weight: 700; }
+    .modal-close {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+    .modal-close:hover { background: rgba(255,255,255,0.35); }
+    .modal-body {
+      padding: 20px 22px;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .modal-body p.helper {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .ai-input-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .ai-input-row textarea {
+      flex: 1;
+      padding: 10px 14px;
+      font-size: 14px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-input);
+      color: var(--text-primary);
+      font-family: inherit;
+      resize: vertical;
+      min-height: 60px;
+      max-height: 120px;
+      transition: border-color var(--transition);
+    }
+    .ai-input-row textarea:focus {
+      outline: none;
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+    }
+    .ai-input-row textarea::placeholder { color: var(--text-muted); }
+    .btn-ai-send {
+      padding: 10px 18px;
+      background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all var(--transition);
+      white-space: nowrap;
+      align-self: flex-end;
+    }
+    .btn-ai-send:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-ai-send:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .ai-response {
+      padding: 16px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      min-height: 60px;
+    }
+    .ai-response .typing {
+      display: inline-block;
+      animation: blink 1s steps(2) infinite;
+    }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* ── Settings Section in Modal ── */
+    .settings-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 4px 0;
+      margin-top: 12px;
+      font-family: inherit;
+      transition: color var(--transition);
+    }
+    .settings-toggle:hover { color: var(--accent); }
+    .settings-panel {
+      display: none;
+      margin-top: 10px;
+      padding: 14px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .settings-panel.open { display: block; }
+    .settings-panel label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .settings-panel input {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 13px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xs);
+      background: var(--bg-input);
+      color: var(--text-primary);
+      font-family: monospace;
+      transition: border-color var(--transition);
+    }
+    .settings-panel input:focus {
+      outline: none;
+      border-color: #7c3aed;
+    }
+    .settings-panel .hint {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+    .btn-save-key {
+      margin-top: 8px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      background: #7c3aed;
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-xs);
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .key-status {
+      font-size: 11px;
+      margin-left: 8px;
+    }
+    .key-status.saved { color: var(--green); }
+    .key-status.missing { color: var(--orange); }
+
     /* ── Responsive ── */
     @media (max-width: 768px) {
       .header h1 { font-size: 1.6rem; }
@@ -660,15 +965,23 @@
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">&#9790;</button>
     <div class="header-content">
       <h1>Free Course &amp; Certification Finder</h1>
-      <p>Discover 150+ free courses from top providers worldwide</p>
+      <p>Discover 230+ free courses from top providers worldwide — now with AI-powered recommendations</p>
       <div class="stats-bar">
         <div class="stat-chip"><span id="totalCourses">0</span> Courses</div>
         <div class="stat-chip"><span id="totalProviders">0</span> Providers</div>
         <div class="stat-chip"><span id="totalDomains">0</span> Domains</div>
         <div class="stat-chip"><span id="totalCerts">0</span> With Certificate</div>
       </div>
+      <div class="creator-badge" id="creatorBadge">Created by <strong>Yogesh Mahesh Bohare</strong></div>
     </div>
   </header>
+
+  <!-- Update Notification Bar -->
+  <div class="update-bar" id="updateBar">
+    <span id="updateBarText"></span>
+    <button id="updateBarAction">Review</button>
+    <button id="updateBarDismiss" style="background:rgba(255,255,255,0.15);">Dismiss</button>
+  </div>
 
   <main class="container">
     <!-- Filter Panel -->
@@ -701,6 +1014,7 @@
         <label class="checkbox-label"><input type="checkbox" id="filterCertificate" /><span>Has Certificate</span></label>
         <label class="checkbox-label"><input type="checkbox" id="filterBookmarks" /><span>&#9733; Bookmarked</span></label>
         <button class="btn-reset" id="resetFilters">Reset</button>
+        <button class="btn-smart-update" id="smartUpdateBtn" title="Use AI to find new courses and validate existing ones">&#8635; Smart Update</button>
       </div>
     </div>
 
@@ -723,12 +1037,66 @@
     </div>
   </main>
 
+  <!-- Smart Update Modal -->
+  <div class="modal-overlay" id="updateModal">
+    <div class="modal" style="max-width:680px;">
+      <div class="modal-header" style="background:linear-gradient(135deg,#059669 0%,#10b981 100%);">
+        <h3>&#8635; Smart Course Update</h3>
+        <button class="modal-close" id="updateModalClose" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="helper">AI analyzes your course database to find new free courses on the internet and identify courses that may no longer be available. Changes are saved locally in your browser.</p>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <button class="btn-ai-send" id="findNewCoursesBtn" style="flex:1;">&#128270; Find New Courses</button>
+          <button class="btn-ai-send" id="validateCoursesBtn" style="flex:1;background:linear-gradient(135deg,#059669 0%,#10b981 100%);">&#10003; Validate Existing</button>
+        </div>
+        <div class="ai-response" id="updateResponse" style="max-height:400px;overflow-y:auto;">Click a button above to start. Requires an OpenRouter API key (set in the AI Recommender settings).</div>
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;color:var(--text-muted);" id="updateStats"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Recommender FAB -->
+  <button class="ai-fab" id="aiFab" title="AI Course Recommender" aria-label="AI Course Recommender">&#9889;</button>
+
+  <!-- AI Recommender Modal -->
+  <div class="modal-overlay" id="aiModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>&#9889; AI Course Recommender</h3>
+        <button class="modal-close" id="aiModalClose" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="helper">Describe what you want to learn and AI will recommend the best free courses from our database. Powered by OpenRouter.</p>
+        <div class="ai-input-row">
+          <textarea id="aiPrompt" placeholder="e.g. I want to learn machine learning from scratch with a certificate..." rows="2"></textarea>
+          <button class="btn-ai-send" id="aiSend">Ask AI</button>
+        </div>
+        <div class="ai-response" id="aiResponse">Your personalized recommendations will appear here.</div>
+        <button class="settings-toggle" id="settingsToggle">&#9881; API Settings</button>
+        <div class="settings-panel" id="settingsPanel">
+          <label for="apiKeyInput">OpenRouter API Key</label>
+          <input type="password" id="apiKeyInput" placeholder="sk-or-v1-..." autocomplete="off" />
+          <div class="hint">Your key is stored only in this browser's localStorage. It is never sent anywhere except OpenRouter's API. Get a key at <a href="https://openrouter.ai/keys" target="_blank" rel="noopener" style="color:var(--accent);">openrouter.ai/keys</a></div>
+          <div style="margin-top:8px;">
+            <button class="btn-save-key" id="saveApiKey">Save Key</button>
+            <span class="key-status" id="keyStatus"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">&#8593;</button>
 
   <footer class="footer">
-    <p>Free Course Finder &mdash; Curated database of 150+ free courses &amp; certifications. All courses link to official provider pages.</p>
+    <p>Free Course Finder &mdash; Curated database of 230+ free courses &amp; certifications. All courses link to official provider pages.</p>
+    <p id="creatorFooter" style="margin-top:6px;font-weight:600;color:var(--text-secondary);">Created by Yogesh Mahesh Bohare</p>
   </footer>
 
+  <script src="courses-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

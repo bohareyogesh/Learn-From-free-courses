@@ -1,0 +1,2851 @@
+window.COURSE_DATABASE = [
+  {
+    "title": "CS50's Introduction to Computer Science",
+    "provider": "Harvard University",
+    "url": "https://cs50.harvard.edu/x/",
+    "description": "Harvard's legendary CS50 covers computer science and programming fundamentals using C, Python, SQL, JavaScript and more. Free to audit with optional paid certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "CS50's Web Programming with Python and JavaScript",
+    "provider": "Harvard University",
+    "url": "https://cs50.harvard.edu/web/",
+    "description": "Dive deeper into web app design and implementation using Python, JavaScript, and SQL with frameworks like Django and React.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "CS50's Introduction to Artificial Intelligence with Python",
+    "provider": "Harvard University",
+    "url": "https://cs50.harvard.edu/ai/",
+    "description": "Explore the concepts and algorithms at the foundation of modern AI through hands-on projects using Python.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "WHO Public Health Courses",
+    "provider": "World Health Organization",
+    "url": "https://openwho.org/courses",
+    "description": "OpenWHO provides a range of public-health courses created by the World Health Organization. Courses are free and include a certificate of completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Health & Life Sciences"
+    ]
+  },
+  {
+    "title": "Google Analytics for Beginners",
+    "provider": "Google",
+    "url": "https://analytics.google.com/analytics/academy/course/6",
+    "description": "Learn the basics of Google Analytics including creating an account, implementing tracking code, analyzing reports, and setting up goals and campaign tracking.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "Google Cloud Skills Boost",
+    "provider": "Google Cloud",
+    "url": "https://www.cloudskillsboost.google/",
+    "description": "Hundreds of hands-on labs and courses covering cloud fundamentals to advanced topics. Earn digital badges and free certificates through learning paths.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Google Skillshop – Ads & Analytics Certifications",
+    "provider": "Google",
+    "url": "https://skillshop.exceedlms.com/student/catalog",
+    "description": "Self-paced training on Google Ads, Analytics, and other products. Many courses offer free certifications upon passing the assessment.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Google Machine Learning Crash Course",
+    "provider": "Google",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "description": "Google's fast-paced, practical introduction to machine learning with TensorFlow APIs. Includes video lectures, real-world case studies, and hands-on exercises.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Google Applied Digital Skills",
+    "provider": "Google",
+    "url": "https://applieddigitalskills.withgoogle.com/",
+    "description": "Free video-based lessons teaching practical digital skills like creating budgets in Sheets, building websites, and data analysis.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "Google AI Essentials",
+    "provider": "Google",
+    "url": "https://www.coursera.org/learn/google-ai-essentials",
+    "description": "Learn how to use AI tools effectively in everyday tasks. Covers writing prompts, using AI responsibly, and boosting productivity with AI. Free to audit on Coursera.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Google IT Support Professional Certificate",
+    "provider": "Google",
+    "url": "https://www.coursera.org/professional-certificates/google-it-support",
+    "description": "Prepare for an entry-level IT support role. Covers troubleshooting, networking, operating systems, system administration, and security. Free to audit.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Networking"
+    ]
+  },
+  {
+    "title": "Google Data Analytics Certificate",
+    "provider": "Google",
+    "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "description": "Gain in-demand skills for data analytics roles including data cleaning, analysis, and visualization using spreadsheets, SQL, R, and Tableau. Free to audit.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Google Project Management Certificate",
+    "provider": "Google",
+    "url": "https://www.coursera.org/professional-certificates/google-project-management",
+    "description": "Learn project management skills including Agile methodologies. Created by Google project managers. Free to audit on Coursera.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Project Management",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Google UX Design Certificate",
+    "provider": "Google",
+    "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+    "description": "Learn the foundations of UX design including wireframing, prototyping, and user research. Build a professional portfolio. Free to audit.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "Google Digital Marketing & E-Commerce Certificate",
+    "provider": "Google",
+    "url": "https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce",
+    "description": "Master digital marketing and e-commerce fundamentals including SEO, SEM, email marketing, and analytics. Free to audit on Coursera.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Microsoft Azure Fundamentals Training",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+    "description": "Self-paced learning for the Azure Fundamentals certification. Covers cloud concepts, Azure services, security, privacy, and pricing.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Microsoft Power Platform Fundamentals",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/",
+    "description": "Learn the business value and capabilities of the Power Platform including Power BI, Power Apps, Power Automate, and Power Virtual Agents.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Microsoft AI Fundamentals",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/",
+    "description": "Covers core Azure AI concepts including machine learning, computer vision, NLP, and conversational AI workloads.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Microsoft Data Fundamentals",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/",
+    "description": "Learn core data concepts including relational, non-relational, and analytics workloads on Azure.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Microsoft 365 Fundamentals",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/microsoft-365-fundamentals/",
+    "description": "Understand cloud concepts, core Microsoft 365 services, security, compliance, privacy, and trust in Microsoft 365.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Microsoft Security Fundamentals",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/",
+    "description": "Learn the fundamentals of security, compliance, and identity across cloud-based and related Microsoft services.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "GitHub Foundations Certification",
+    "provider": "Microsoft / GitHub",
+    "url": "https://learn.microsoft.com/en-us/collections/o1njfe825p602p",
+    "description": "Learn Git and GitHub fundamentals including repositories, commits, branching, pull requests, and collaboration workflows.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "GitHub Skills",
+    "provider": "GitHub",
+    "url": "https://skills.github.com/",
+    "description": "Interactive courses that teach GitHub skills hands-on with real repositories. Covers Git, GitHub Actions, Pages, and more.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "IBM SkillsBuild – AI Foundations",
+    "provider": "IBM",
+    "url": "https://skillsbuild.org/students",
+    "description": "Free learning pathways in artificial intelligence. Explore AI foundations, build skills and earn digital credentials at no cost.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "IBM SkillsBuild – Cloud Computing",
+    "provider": "IBM",
+    "url": "https://skillsbuild.org/students",
+    "description": "Learn foundational cloud concepts and earn a digital badge. All SkillsBuild courses and credentials are completely free.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "IBM SkillsBuild – Blockchain Essentials",
+    "provider": "IBM",
+    "url": "https://skillsbuild.org/students",
+    "description": "Introduces blockchain technology and its applications. Earn a free IBM digital credential upon completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "IBM SkillsBuild – Data Science Foundations",
+    "provider": "IBM",
+    "url": "https://skillsbuild.org/students",
+    "description": "Explore data science methodology, tools, and techniques. Learn Python, SQL, and statistical analysis fundamentals.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "IBM SkillsBuild – Cybersecurity Fundamentals",
+    "provider": "IBM",
+    "url": "https://skillsbuild.org/students",
+    "description": "Learn cybersecurity threats, vulnerabilities, and tools to protect digital assets. Earn an IBM digital badge.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity"
+    ]
+  },
+  {
+    "title": "Cognitive Class – Deep Learning with TensorFlow",
+    "provider": "IBM (Cognitive Class)",
+    "url": "https://cognitiveclass.ai/courses/deep-learning-tensorflow",
+    "description": "Learn deep learning fundamentals with TensorFlow. Covers CNNs, RNNs, and autoencoders with hands-on labs.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Cognitive Class – Data Science Methodology",
+    "provider": "IBM (Cognitive Class)",
+    "url": "https://cognitiveclass.ai/courses/data-science-methodology-2",
+    "description": "Understand the data science methodology framework used by data scientists to solve business problems.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "AWS Skill Builder – On-Demand Cloud Training",
+    "provider": "Amazon Web Services",
+    "url": "https://explore.skillbuilder.aws/",
+    "description": "Over 600 free on-demand courses covering cloud fundamentals to advanced topics. Recommendations aligned to job roles.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "AWS Educate – Cloud Career Pathways",
+    "provider": "Amazon Web Services",
+    "url": "https://www.awseducate.com/",
+    "description": "Free access to self-paced cloud learning resources and twelve cloud career pathways. Earn credentials at your own pace.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "AWS re/Start – Cloud Skills Training",
+    "provider": "Amazon Web Services",
+    "url": "https://aws.amazon.com/training/restart/",
+    "description": "Cohort-based programme providing 400+ hours of free training to launch cloud careers. Connects graduates with job opportunities.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing",
+      "Career Skills"
+    ]
+  },
+  {
+    "title": "Amazon Machine Learning University",
+    "provider": "Amazon Web Services",
+    "url": "https://aws.amazon.com/training/learning-paths/machine-learning/",
+    "description": "The same ML courses used to train Amazon developers. Comprehensive and free, providing a solid machine learning foundation.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "AWS Cloud Practitioner Essentials",
+    "provider": "Amazon Web Services",
+    "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials",
+    "description": "Fundamental course covering AWS Cloud concepts, services, security, architecture, pricing, and support.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Salesforce AI Associate & AI Specialist",
+    "provider": "Salesforce",
+    "url": "https://trailhead.salesforce.com/",
+    "description": "Salesforce offers AI Associate and AI Specialist certification exams free of charge. Learn AI concepts within the Salesforce ecosystem.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Salesforce Trailhead – Admin Beginner",
+    "provider": "Salesforce",
+    "url": "https://trailhead.salesforce.com/content/learn/trails/force_com_admin_beginner",
+    "description": "Learn Salesforce administration fundamentals through interactive trails. Earn badges as you progress through modules.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Salesforce Trailhead – Developer Beginner",
+    "provider": "Salesforce",
+    "url": "https://trailhead.salesforce.com/content/learn/trails/force_com_dev_beginner",
+    "description": "Start your Salesforce developer journey with Apex, Visualforce, and Lightning Web Components. Free interactive learning.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Cisco Networking Academy – Courses & Badges",
+    "provider": "Cisco",
+    "url": "https://www.netacad.com/",
+    "description": "Free self-paced courses across networking, cybersecurity, programming, and digital literacy. Earn digital badges and certificates.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Networking",
+      "Cybersecurity"
+    ]
+  },
+  {
+    "title": "Cisco Python Essentials 1",
+    "provider": "Cisco",
+    "url": "https://www.netacad.com/courses/programming/python-essentials-1",
+    "description": "Learn Python programming basics through hands-on labs. Free and awards a digital badge on completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Cisco Introduction to Cybersecurity",
+    "provider": "Cisco",
+    "url": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
+    "description": "Beginner-friendly course covering cybersecurity concepts. Free, self-paced, and provides a certificate on completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity"
+    ]
+  },
+  {
+    "title": "Cisco Networking Essentials",
+    "provider": "Cisco",
+    "url": "https://www.netacad.com/courses/networking/networking-essentials",
+    "description": "Covers networking fundamentals including Ethernet, wireless, IP addressing, and network security concepts.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Networking"
+    ]
+  },
+  {
+    "title": "Cisco Introduction to IoT",
+    "provider": "Cisco",
+    "url": "https://www.netacad.com/courses/iot/introduction-iot",
+    "description": "Learn how the Internet of Things transforms businesses and how to connect devices, analyze data, and create value.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Networking"
+    ]
+  },
+  {
+    "title": "Kaggle – Intro to Machine Learning",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+    "description": "Learn the core ideas in machine learning and build your first models using scikit-learn. Hands-on with real datasets.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Kaggle – Python",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/python",
+    "description": "Learn the most important language for data science. Covers variables, functions, data types, loops, and working with external libraries.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Kaggle – Pandas",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/pandas",
+    "description": "Master the most popular Python library for data analysis. Learn to create, read, and manipulate DataFrames.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Kaggle – Data Visualization",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/data-visualization",
+    "description": "Make great data visualizations using Seaborn. Covers line charts, bar charts, heatmaps, scatter plots, and distributions.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Kaggle – Intro to SQL",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/intro-to-sql",
+    "description": "Learn SQL for working with databases using Google BigQuery. Covers SELECT, FROM, WHERE, GROUP BY, and more.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Kaggle – Intro to Deep Learning",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/intro-to-deep-learning",
+    "description": "Build and train neural networks using TensorFlow and Keras. Covers neurons, layers, optimizers, and regularization.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Kaggle – Feature Engineering",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/feature-engineering",
+    "description": "Discover the most effective way to improve model performance through feature engineering techniques.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Kaggle – Natural Language Processing",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/natural-language-processing",
+    "description": "Learn NLP techniques to analyze and generate text data using modern approaches.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Kaggle – Computer Vision",
+    "provider": "Kaggle",
+    "url": "https://www.kaggle.com/learn/computer-vision",
+    "description": "Build convolutional neural networks with TensorFlow and Keras for image classification and object detection.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "HubSpot Inbound Marketing Certification",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/courses/inbound-marketing",
+    "description": "Master inbound marketing strategy including content creation, social promotion, lead nurturing, and conversion optimization.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "HubSpot Content Marketing Certification",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/courses/content-marketing",
+    "description": "Learn to create compelling content, build a content strategy, and promote content effectively across channels.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "HubSpot Social Media Marketing Certification",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/courses/social-media",
+    "description": "Develop a social media strategy, build an engaged audience, and measure ROI across social platforms.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "HubSpot Email Marketing Certification",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/courses/email-marketing",
+    "description": "Learn email marketing best practices including segmentation, deliverability, A/B testing, and analytics.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "HubSpot SEO Training Course",
+    "provider": "HubSpot Academy",
+    "url": "https://academy.hubspot.com/courses/seo-training",
+    "description": "Comprehensive SEO training covering keyword research, on-page optimization, link building, and technical SEO.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Learning How to Learn",
+    "provider": "Coursera (McMaster / UC San Diego)",
+    "url": "https://www.coursera.org/learn/learning-how-to-learn",
+    "description": "The world's most popular MOOC. Learn powerful mental tools to help you master tough subjects using approaches backed by neuroscience.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Personal Development",
+      "Humanities & Social Sciences"
+    ]
+  },
+  {
+    "title": "The Science of Well-Being",
+    "provider": "Coursera (Yale University)",
+    "url": "https://www.coursera.org/learn/the-science-of-well-being",
+    "description": "Yale's most popular course explores what psychological science says about happiness and how to apply it to your own life.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Personal Development",
+      "Humanities & Social Sciences"
+    ]
+  },
+  {
+    "title": "Financial Markets",
+    "provider": "Coursera (Yale University)",
+    "url": "https://www.coursera.org/learn/financial-markets-global",
+    "description": "Nobel laureate Robert Shiller provides an overview of financial markets, risk management, and behavioral finance principles.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Finance & Economics",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Machine Learning by Andrew Ng",
+    "provider": "Coursera (Stanford / DeepLearning.AI)",
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "description": "The definitive machine learning course by Andrew Ng. Covers supervised learning, unsupervised learning, and best practices for ML.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Programming for Everybody (Python)",
+    "provider": "Coursera (University of Michigan)",
+    "url": "https://www.coursera.org/learn/python",
+    "description": "One of the most popular Python courses worldwide. Learn variables, conditional execution, functions, and loops.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "AI For Everyone",
+    "provider": "Coursera (DeepLearning.AI)",
+    "url": "https://www.coursera.org/learn/ai-for-everyone",
+    "description": "Andrew Ng's non-technical course on AI. Understand what AI can do for your company, build AI strategy, and navigate ethical considerations.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Deep Learning Specialization",
+    "provider": "Coursera (DeepLearning.AI)",
+    "url": "https://www.coursera.org/specializations/deep-learning",
+    "description": "Master deep learning fundamentals. Build and train neural networks, CNNs, RNNs, and learn optimization strategies. Free to audit.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Algorithms, Part I",
+    "provider": "Coursera (Princeton University)",
+    "url": "https://www.coursera.org/learn/algorithms-part1",
+    "description": "Covers fundamental data structures, sorting algorithms, and searching algorithms using Java. By Robert Sedgewick and Kevin Wayne.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Introduction to Data Science in Python",
+    "provider": "Coursera (University of Michigan)",
+    "url": "https://www.coursera.org/learn/python-data-analysis",
+    "description": "Introduce techniques such as lambdas and pandas for data manipulation and learn the fundamentals of data analysis.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Introduction to TensorFlow for AI, ML, and DL",
+    "provider": "Coursera (DeepLearning.AI)",
+    "url": "https://www.coursera.org/learn/introduction-tensorflow",
+    "description": "Learn to build scalable AI-powered algorithms using TensorFlow. Build computer vision and NLP models.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Introduction to Linux",
+    "provider": "edX (Linux Foundation)",
+    "url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux",
+    "description": "Develop a good working knowledge of Linux for system administration, application development, and everyday use.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "Introduction to Kubernetes",
+    "provider": "edX (Linux Foundation)",
+    "url": "https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes",
+    "description": "Learn Kubernetes fundamentals to build, deploy, and manage containerized applications at scale.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "Introduction to Cloud Infrastructure Technologies",
+    "provider": "edX (Linux Foundation)",
+    "url": "https://www.edx.org/learn/cloud-computing/the-linux-foundation-introduction-to-cloud-infrastructure-technologies",
+    "description": "Covers cloud infrastructure components including virtualization, containers, SDN, and cloud-native architectures.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "Khan Academy – Algebra",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/math/algebra",
+    "description": "Comprehensive algebra course covering linear equations, inequalities, functions, graphs, and systems of equations. Completely free with mastery tracking.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mathematics"
+    ]
+  },
+  {
+    "title": "Khan Academy – Calculus",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/math/calculus-1",
+    "description": "Learn limits, derivatives, and integrals through interactive exercises and videos. Covers differential and integral calculus.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mathematics"
+    ]
+  },
+  {
+    "title": "Khan Academy – AP Computer Science Principles",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/computing/ap-computer-science-principles",
+    "description": "Prepare for the AP Computer Science Principles exam. Covers algorithms, data, programming, and the internet.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Khan Academy – Personal Finance",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/college-careers-more/personal-finance",
+    "description": "Learn practical money skills: saving, budgeting, credit, insurance, taxes, and investing fundamentals.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Finance & Economics",
+      "Personal Development"
+    ]
+  },
+  {
+    "title": "Khan Academy – Macroeconomics",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/economics-finance-domain/macroeconomics",
+    "description": "Understand GDP, inflation, unemployment, fiscal policy, and monetary policy through engaging videos and practice exercises.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Finance & Economics"
+    ]
+  },
+  {
+    "title": "Khan Academy – SAT Prep",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/digital-sat",
+    "description": "Official SAT practice in partnership with College Board. Includes practice tests, personalized study plans, and video lessons.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mathematics",
+      "Personal Development"
+    ]
+  },
+  {
+    "title": "Khan Academy – Statistics & Probability",
+    "provider": "Khan Academy",
+    "url": "https://www.khanacademy.org/math/statistics-probability",
+    "description": "Learn descriptive statistics, probability, random variables, and inference. Essential for data science and research.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mathematics",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "MIT OCW – Introduction to Computer Science (6.0001)",
+    "provider": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+    "description": "MIT's intro to CS using Python. Covers computational thinking, data structures, algorithms, and program design.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "MIT OCW – Linear Algebra (18.06)",
+    "provider": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+    "description": "Gilbert Strang's legendary linear algebra course. Covers matrices, vector spaces, eigenvalues, and applications.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mathematics"
+    ]
+  },
+  {
+    "title": "MIT OCW – Introduction to Algorithms (6.006)",
+    "provider": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "description": "Covers mathematical modeling of computational problems, common algorithms, data structures, and algorithm design.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "MIT OCW – Principles of Microeconomics (14.01)",
+    "provider": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/",
+    "description": "Analyze individual and firm decision-making. Covers supply and demand, market structures, and welfare economics.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Finance & Economics"
+    ]
+  },
+  {
+    "title": "MIT OCW – Mathematics for Computer Science (6.042J)",
+    "provider": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+    "description": "Covers discrete mathematics including formal proofs, induction, graph theory, probability, and recurrences.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mathematics",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Stanford Online – Databases: Relational Databases and SQL",
+    "provider": "Stanford Online",
+    "url": "https://online.stanford.edu/courses/soe-ydatabases0005-databases-relational-databases-and-sql",
+    "description": "Learn relational database fundamentals and SQL from Stanford. Self-paced course covering queries, modifications, and constraints.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Databases"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Responsive Web Design",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+    "description": "Learn HTML, CSS and modern responsive design techniques. Complete projects and pass the exam for a verified certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "freeCodeCamp JavaScript Algorithms and Data Structures",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+    "description": "Master JavaScript fundamentals, ES6, regex, debugging, data structures, algorithm scripting, and OOP.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Front End Development Libraries",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+    "description": "Learn Bootstrap, jQuery, SASS, React, and Redux. Build interactive front-end projects for certification.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Relational Database",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/relational-database/",
+    "description": "Learn SQL and relational database concepts through interactive lessons, Bash scripting, and project-based learning.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Data Analysis with Python",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+    "description": "Learn data analysis using NumPy, Pandas, and Matplotlib. Complete projects for a free verified certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Scientific Computing with Python",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/scientific-computing-with-python/",
+    "description": "Learn Python for scientific computing including string manipulation, data structures, algorithms, and OOP.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Machine Learning with Python",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+    "description": "Learn machine learning with TensorFlow. Build neural networks, NLP models, and reinforcement learning agents.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Back End Development and APIs",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/",
+    "description": "Learn Node.js, Express, MongoDB, and Mongoose. Build microservices and APIs for your verified certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development",
+      "Databases"
+    ]
+  },
+  {
+    "title": "freeCodeCamp Information Security",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/information-security/",
+    "description": "Learn information security with HelmetJS, password hashing, and penetration testing with Python.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity"
+    ]
+  },
+  {
+    "title": "The Odin Project – Full Stack JavaScript",
+    "provider": "The Odin Project",
+    "url": "https://www.theodinproject.com/paths/full-stack-javascript",
+    "description": "A comprehensive, project-based full-stack curriculum covering HTML, CSS, JavaScript, Node.js, React, and databases. Completely free and open source.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Web Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "The Odin Project – Full Stack Ruby on Rails",
+    "provider": "The Odin Project",
+    "url": "https://www.theodinproject.com/paths/full-stack-ruby-on-rails",
+    "description": "Learn full-stack web development with Ruby on Rails. Covers Ruby, Rails, databases, authentication, and deployment.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Web Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Elements of AI: Introduction to AI",
+    "provider": "MinnaLearn & University of Helsinki",
+    "url": "https://course.elementsofai.com/",
+    "description": "Demystifies AI by explaining what it is, what it can do, and how it affects our lives. Theory with practical exercises.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Elements of AI: Building AI",
+    "provider": "MinnaLearn & University of Helsinki",
+    "url": "https://buildingai.elementsofai.com/",
+    "description": "The second part of Elements of AI. Learn algorithms that make AI possible. Some basic Python recommended.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "fast.ai – Practical Deep Learning for Coders",
+    "provider": "fast.ai",
+    "url": "https://course.fast.ai/",
+    "description": "A top-down approach to deep learning. Build state-of-the-art models from day one using the fastai library and PyTorch.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "fast.ai – Practical Deep Learning Part 2",
+    "provider": "fast.ai",
+    "url": "https://course.fast.ai/Lessons/part2.html",
+    "description": "Advanced deep learning topics including stable diffusion, attention mechanisms, and building models from scratch.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Hugging Face NLP Course",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn/nlp-course",
+    "description": "Learn NLP using the Transformers library. Covers tokenization, fine-tuning, and building NLP applications with state-of-the-art models.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Hugging Face Deep Reinforcement Learning Course",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn/deep-rl-course",
+    "description": "Learn deep reinforcement learning from beginner to expert. Covers Q-learning, policy gradient, PPO, and more.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "HP LIFE Free Courses",
+    "provider": "HP LIFE",
+    "url": "https://www.life-global.org/allcourses",
+    "description": "30+ free courses covering business and IT skills. Each completed course earns a free certificate of completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Business & Management",
+      "Leadership & Soft Skills"
+    ]
+  },
+  {
+    "title": "AI for Business Professionals",
+    "provider": "HP LIFE",
+    "url": "https://www.life-global.org/news/ai-for-business-professional",
+    "description": "Explore AI's role in business, standalone vs integrated AI tools, prompt crafting, and ethical considerations.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "HP LIFE Agile Project Management",
+    "provider": "HP LIFE",
+    "url": "https://www.life-global.org/allcourses",
+    "description": "Introduces agile principles and project delivery methods. Free with a certificate upon completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Project Management",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "HP LIFE Effective Leadership",
+    "provider": "HP LIFE",
+    "url": "https://www.life-global.org/allcourses",
+    "description": "Develop leadership and soft skills relevant to business settings. Free with a certificate upon completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Leadership & Soft Skills",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Artificial Intelligence and Career Empowerment",
+    "provider": "University of Maryland",
+    "url": "https://www.rhsmith.umd.edu/programs/executive-education/learning-opportunities-individuals/free-online-certificate-artificial-intelligence-and-career-empowerment",
+    "description": "Examines how AI transforms industries and provides career guidance. Completely free certificate upon completion.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Generative AI for Beginners",
+    "provider": "Simplilearn",
+    "url": "https://www.simplilearn.com/generative-ai-for-beginners-free-course-skillup",
+    "description": "Introduces generative AI techniques for text, image, and video creation. Four hours of self-paced lessons with a completion certificate.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Canva for Beginners",
+    "provider": "Simplilearn",
+    "url": "https://www.simplilearn.com/free-canva-course-skillup",
+    "description": "Design fundamentals for web pages, posters, and marketing materials using Canva. Free with completion certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "PMP Basics – Free Project Management Course",
+    "provider": "Simplilearn",
+    "url": "https://www.simplilearn.com/free-pmp-basics-skillup",
+    "description": "Learn project management fundamentals aligned with PMI's PMBOK Guide. Covers project lifecycle, stakeholder management, and scheduling.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Project Management"
+    ]
+  },
+  {
+    "title": "Digital Marketing 101",
+    "provider": "Simplilearn",
+    "url": "https://www.simplilearn.com/digital-marketing-free-course-skillup",
+    "description": "Introduction to digital marketing covering SEO, SEM, social media, email marketing, and content strategy.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "SoloLearn Introduction to Python",
+    "provider": "SoloLearn",
+    "url": "https://www.sololearn.com/learn/courses/python-introduction",
+    "description": "Interactive Python lessons with quizzes and coding challenges. Free with a certificate of completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "SoloLearn Introduction to C++",
+    "provider": "SoloLearn",
+    "url": "https://www.sololearn.com/learn/courses/cpp-introduction",
+    "description": "Learn fundamental C++ programming concepts: variables, control structures, functions, and OOP basics.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "SoloLearn Introduction to JavaScript",
+    "provider": "SoloLearn",
+    "url": "https://www.sololearn.com/learn/courses/javascript-introduction",
+    "description": "Master JavaScript basics including DOM manipulation, events, and ES6 features through interactive coding.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "SoloLearn Introduction to HTML",
+    "provider": "SoloLearn",
+    "url": "https://www.sololearn.com/learn/courses/html-introduction",
+    "description": "Learn HTML fundamentals for building web pages. Covers elements, attributes, forms, and semantic HTML.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "SoloLearn Introduction to SQL",
+    "provider": "SoloLearn",
+    "url": "https://www.sololearn.com/learn/courses/sql-introduction",
+    "description": "Learn SQL from scratch. Covers SELECT, filtering, joining tables, and aggregate functions with interactive exercises.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases"
+    ]
+  },
+  {
+    "title": "Java Programming I",
+    "provider": "University of Helsinki (MOOC.fi)",
+    "url": "https://java-programming.mooc.fi/",
+    "description": "Comprehensive introductory programming course focusing on Java and object-oriented programming. Free with certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Java Programming II",
+    "provider": "University of Helsinki (MOOC.fi)",
+    "url": "https://java-programming.mooc.fi/",
+    "description": "Continue mastering Java with advanced OOP, data structures, streams, and GUI programming. Free with certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Programming Foundations: Web Security",
+    "provider": "LinkedIn Learning",
+    "url": "https://linkedin.com/learning/programming-foundations-web-security-2",
+    "description": "Introductory web-security fundamentals. Free to access and includes a certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "DigitalDefynd Free Certificate",
+    "provider": "DigitalDefynd",
+    "url": "https://digitaldefynd.com/free-digital-defynd-certificate/",
+    "description": "Earn a free certificate by completing curated courses and sharing a review. Quick way to showcase achievements.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Personal Development"
+    ]
+  },
+  {
+    "title": "Saylor Academy Principles of Management",
+    "provider": "Saylor Academy",
+    "url": "https://learn.saylor.org/course/bus208",
+    "description": "Core management functions: planning, organizing, leading, and controlling. Free verifiable certificate on completion.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Saylor Academy Introduction to Linear Algebra",
+    "provider": "Saylor Academy",
+    "url": "https://learn.saylor.org/course/ma005",
+    "description": "Systems of linear equations, matrices, and vector spaces. Free certificate upon passing the exam.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Mathematics"
+    ]
+  },
+  {
+    "title": "Saylor Academy Environmental Science",
+    "provider": "Saylor Academy",
+    "url": "https://learn.saylor.org/course/bio101",
+    "description": "Ecological principles, biodiversity, ecosystems, and sustainability. Free certificate on meeting assessment requirements.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Environmental Science",
+      "Health & Life Sciences"
+    ]
+  },
+  {
+    "title": "Saylor Academy Introduction to Psychology",
+    "provider": "Saylor Academy",
+    "url": "https://learn.saylor.org/course/psych101",
+    "description": "Scientific study of behavior and mental processes. Earn a free certificate by completing the course and final exam.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Humanities & Social Sciences"
+    ]
+  },
+  {
+    "title": "Saylor Academy Introduction to Project Management",
+    "provider": "Saylor Academy",
+    "url": "https://learn.saylor.org/course/bus402",
+    "description": "Foundational project management concepts, tools, and techniques across the project lifecycle. Free certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Project Management",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Saylor Academy Introduction to Computer Science",
+    "provider": "Saylor Academy",
+    "url": "https://learn.saylor.org/course/cs101",
+    "description": "Covers computing history, data representation, algorithms, programming basics, and modern computing concepts. Free certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Saylor Academy Introduction to Statistics",
+    "provider": "Saylor Academy",
+    "url": "https://learn.saylor.org/course/ma121",
+    "description": "Descriptive and inferential statistics, probability distributions, hypothesis testing, and regression analysis.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Mathematics",
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "MongoDB University – MongoDB Basics",
+    "provider": "MongoDB",
+    "url": "https://learn.mongodb.com/",
+    "description": "Learn the fundamentals of MongoDB including CRUD operations, data modeling, aggregation, and indexing. Free with certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases"
+    ]
+  },
+  {
+    "title": "MongoDB University – MongoDB for Developers",
+    "provider": "MongoDB",
+    "url": "https://learn.mongodb.com/",
+    "description": "Build applications with MongoDB using drivers, aggregation framework, change streams, and Atlas search.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Neo4j GraphAcademy – Neo4j Fundamentals",
+    "provider": "Neo4j",
+    "url": "https://graphacademy.neo4j.com/",
+    "description": "Learn graph database concepts and Cypher query language. Build and query graph data models. Free with badge.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases"
+    ]
+  },
+  {
+    "title": "Redis University – Redis for Developers",
+    "provider": "Redis",
+    "url": "https://university.redis.io/",
+    "description": "Master Redis data structures, caching patterns, and application development. Free hands-on course with certification.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "Unity Essentials Pathway",
+    "provider": "Unity",
+    "url": "https://learn.unity.com/pathway/unity-essentials",
+    "description": "Get started with Unity game engine. Learn the editor, create 2D and 3D projects, and understand core Unity concepts.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Game Development",
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "Unity Junior Programmer Pathway",
+    "provider": "Unity",
+    "url": "https://learn.unity.com/pathway/junior-programmer",
+    "description": "Learn C# programming in Unity. Build prototypes, manage scenes, implement user interfaces, and publish projects.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Game Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Alison – Diploma in IT Management",
+    "provider": "Alison",
+    "url": "https://alison.com/course/diploma-in-it-management",
+    "description": "Free diploma covering IT governance, service management, infrastructure, and strategic IT planning.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Alison – Diploma in Project Management",
+    "provider": "Alison",
+    "url": "https://alison.com/course/diploma-in-project-management",
+    "description": "Comprehensive project management training covering PMBOK concepts, scheduling, budgeting, and risk management.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Project Management"
+    ]
+  },
+  {
+    "title": "Alison – Introduction to Digital Marketing",
+    "provider": "Alison",
+    "url": "https://alison.com/course/introduction-to-digital-marketing",
+    "description": "Learn SEO, social media marketing, Google Analytics, and content strategy fundamentals.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "OpenLearn – Introduction to Cyber Security",
+    "provider": "OpenLearn (Open University)",
+    "url": "https://www.open.edu/openlearn/science-maths-technology/introduction-cyber-security-stay-safe-online/",
+    "description": "Understand online security threats and how to protect yourself. Covers passwords, malware, phishing, and encryption.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity"
+    ]
+  },
+  {
+    "title": "OpenLearn – Introduction to Bookkeeping and Accounting",
+    "provider": "OpenLearn (Open University)",
+    "url": "https://www.open.edu/openlearn/money-business/introduction-bookkeeping-and-accounting/",
+    "description": "Learn the basics of bookkeeping and accounting, including double-entry bookkeeping and financial statements.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Finance & Economics",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "FutureLearn – Digital Skills: Digital Marketing",
+    "provider": "FutureLearn (Accenture)",
+    "url": "https://www.futurelearn.com/courses/digital-skills-digital-marketing",
+    "description": "Discover the key digital marketing concepts including web analytics, SEO, social media, and email marketing.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Digital Marketing"
+    ]
+  },
+  {
+    "title": "FutureLearn – Introduction to Cyber Security",
+    "provider": "FutureLearn (Open University)",
+    "url": "https://www.futurelearn.com/courses/introduction-to-cyber-security",
+    "description": "Understand online security threats and learn to protect your digital life. Free course with upgrade option for certificate.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Cybersecurity"
+    ]
+  },
+  {
+    "title": "Oracle – Database Foundations",
+    "provider": "Oracle Academy",
+    "url": "https://academy.oracle.com/en/solutions-curriculum.html",
+    "description": "Learn database fundamentals, data modeling, SQL queries, and Oracle database concepts. Free for students and educators.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Databases"
+    ]
+  },
+  {
+    "title": "Oracle – Java Fundamentals",
+    "provider": "Oracle Academy",
+    "url": "https://academy.oracle.com/en/solutions-curriculum.html",
+    "description": "Master Java programming fundamentals including OOP, exception handling, and JavaFX through Oracle's curriculum.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "SAP Learning – SAP Basics",
+    "provider": "SAP",
+    "url": "https://learning.sap.com/",
+    "description": "Free courses on SAP fundamentals including ERP concepts, SAP S/4HANA navigation, and business process integration.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Business & Management",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Codecademy – Learn HTML",
+    "provider": "Codecademy",
+    "url": "https://www.codecademy.com/learn/learn-html",
+    "description": "Interactive course teaching HTML fundamentals: elements, structure, tables, forms, and semantic markup.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Codecademy – Learn CSS",
+    "provider": "Codecademy",
+    "url": "https://www.codecademy.com/learn/learn-css",
+    "description": "Master CSS styling: selectors, box model, flexbox, grid, animations, and responsive design.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Codecademy – Learn Python 3",
+    "provider": "Codecademy",
+    "url": "https://www.codecademy.com/learn/learn-python-3",
+    "description": "Interactive Python course covering syntax, control flow, functions, lists, loops, strings, and modules.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Codecademy – Learn JavaScript",
+    "provider": "Codecademy",
+    "url": "https://www.codecademy.com/learn/introduction-to-javascript",
+    "description": "Interactive JavaScript course: variables, data types, functions, scope, arrays, loops, and objects.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Codecademy – Learn SQL",
+    "provider": "Codecademy",
+    "url": "https://www.codecademy.com/learn/learn-sql",
+    "description": "Master SQL queries: SELECT, filtering, joins, aggregates, and multiple tables. Interactive exercises included.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Databases"
+    ]
+  },
+  {
+    "title": "Scrimba – Learn React for Free",
+    "provider": "Scrimba",
+    "url": "https://scrimba.com/learn/learnreact",
+    "description": "Interactive screencasts teaching React fundamentals including components, props, state, hooks, and routing.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Exercism – Free Coding Practice",
+    "provider": "Exercism",
+    "url": "https://exercism.org/",
+    "description": "Practice coding in 70+ languages with mentored exercises. Free and open source with human-reviewed feedback.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Tableau eLearning – Free Training Videos",
+    "provider": "Tableau",
+    "url": "https://www.tableau.com/learn/training",
+    "description": "Free video-based training on data visualization with Tableau. Covers dashboards, calculations, and visual analytics.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "Power BI Free Training",
+    "provider": "Microsoft",
+    "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi",
+    "description": "Learn to create reports, dashboards, and data models with Power BI. Free Microsoft Learn modules.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "ChatGPT Prompt Engineering for Developers",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/",
+    "description": "Learn prompt engineering best practices from Isa Fulford (OpenAI) and Andrew Ng. Build LLM-powered applications.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "LangChain for LLM Application Development",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/",
+    "description": "Learn to use LangChain to build LLM applications with chains, agents, memory, and document processing.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Building Systems with ChatGPT API",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/",
+    "description": "Build multi-step AI systems using large language models. Covers classification, moderation, chain-of-thought, and evaluation.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "LangChain: Chat with Your Data",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/short-courses/langchain-chat-with-your-data/",
+    "description": "Build a chatbot to interact with your own data using LangChain, document loaders, vector stores, and retrieval chains.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Generative AI with Large Language Models",
+    "provider": "Coursera (DeepLearning.AI / AWS)",
+    "url": "https://www.coursera.org/learn/generative-ai-with-llms",
+    "description": "Understand the generative AI lifecycle. Learn transformer architecture, fine-tuning, RLHF, and deployment. Free to audit.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Great Learning – Introduction to Data Science",
+    "provider": "Great Learning",
+    "url": "https://www.mygreatlearning.com/academy/learn-for-free/courses/introduction-to-data-science",
+    "description": "Covers data science lifecycle, Python for data analysis, statistics, and visualization. Free with certificate.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Great Learning – Python for Machine Learning",
+    "provider": "Great Learning",
+    "url": "https://www.mygreatlearning.com/academy/learn-for-free/courses/python-for-machine-learning",
+    "description": "Learn Python libraries for ML: NumPy, Pandas, Matplotlib, scikit-learn. Build predictive models from scratch.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Great Learning – Cloud Computing Basics",
+    "provider": "Great Learning",
+    "url": "https://www.mygreatlearning.com/academy/learn-for-free/courses/cloud-computing",
+    "description": "Understand cloud computing models (IaaS, PaaS, SaaS), deployment types, and major cloud providers.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Harvard – Data Science: R Basics",
+    "provider": "edX (Harvard University)",
+    "url": "https://www.edx.org/learn/r-programming/harvard-university-data-science-r-basics",
+    "description": "First course in Harvard's Data Science Professional Certificate. Learn R programming for data analysis.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "NPTEL – Programming in Python",
+    "provider": "NPTEL (IIT Madras)",
+    "url": "https://nptel.ac.in/courses/106106182",
+    "description": "IIT Madras Python course covering basics to advanced topics. Free with optional certification exam.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "NPTEL – Introduction to Machine Learning",
+    "provider": "NPTEL (IIT Kharagpur)",
+    "url": "https://nptel.ac.in/courses/106105152",
+    "description": "Comprehensive ML course from IIT Kharagpur covering supervised, unsupervised, and reinforcement learning.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Swayam – Cloud Computing",
+    "provider": "Swayam (NPTEL)",
+    "url": "https://swayam.gov.in/",
+    "description": "India's MOOC platform offering free courses from top Indian universities and institutions. Covers cloud computing fundamentals.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "WordPress – Learn WordPress",
+    "provider": "WordPress",
+    "url": "https://learn.wordpress.org/",
+    "description": "Free workshops, courses, and lesson plans for learning WordPress. Covers site building, design, and development.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Figma – Getting Started with Figma",
+    "provider": "Figma",
+    "url": "https://help.figma.com/hc/en-us/categories/360002051613-Get-started",
+    "description": "Learn Figma's design tool from scratch. Covers interface, frames, components, prototyping, and collaboration.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "Git & GitHub Crash Course",
+    "provider": "freeCodeCamp (YouTube)",
+    "url": "https://www.youtube.com/watch?v=RGOj5yH7evk",
+    "description": "Comprehensive Git and GitHub tutorial covering version control, branching, merging, pull requests, and collaboration workflows.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "DevOps",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Docker Getting Started Tutorial",
+    "provider": "Docker",
+    "url": "https://docs.docker.com/get-started/",
+    "description": "Official Docker tutorial covering containers, images, volumes, networking, Docker Compose, and deployment.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "DevOps",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Kubernetes Basics",
+    "provider": "Kubernetes.io",
+    "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+    "description": "Official Kubernetes tutorial covering deployment, scaling, updating, and managing containerized applications.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "DevOps",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Android Basics with Compose",
+    "provider": "Google",
+    "url": "https://developer.android.com/courses/android-basics-compose/course",
+    "description": "Build Android apps with Kotlin and Jetpack Compose. Covers UI, navigation, data persistence, and networking.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Mobile Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "iOS Development with Swift – Stanford CS193p",
+    "provider": "Stanford University",
+    "url": "https://cs193p.sites.stanford.edu/",
+    "description": "Stanford's famous iOS development course using SwiftUI. Covers MVVM, gestures, animations, and persistence.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mobile Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Flutter – Your First Flutter App",
+    "provider": "Google (Flutter)",
+    "url": "https://codelabs.developers.google.com/codelabs/flutter-codelab-first",
+    "description": "Build your first Flutter app step by step. Learn widgets, state management, and cross-platform development.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mobile Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "React Native – Getting Started",
+    "provider": "Meta",
+    "url": "https://reactnative.dev/docs/getting-started",
+    "description": "Official React Native guide for building native mobile apps using JavaScript and React.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Mobile Development",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Cisco Data Science Essentials",
+    "provider": "Cisco",
+    "url": "https://www.netacad.com/courses/data-science",
+    "description": "Learn data science fundamentals including Python, data analysis, and visualization through Cisco's academy.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics"
+    ]
+  },
+  {
+    "title": "Palo Alto Networks Cybersecurity Foundation",
+    "provider": "Palo Alto Networks",
+    "url": "https://www.paloaltonetworks.com/cyberpedia/free-cybersecurity-courses",
+    "description": "Free cybersecurity foundation courses covering network security, cloud security, and threat prevention.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity",
+      "Networking"
+    ]
+  },
+  {
+    "title": "Fortinet NSE Training Institute – Free Courses",
+    "provider": "Fortinet",
+    "url": "https://training.fortinet.com/",
+    "description": "Free cybersecurity training covering network security, cloud security, and security operations. Earn NSE certifications.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity",
+      "Networking"
+    ]
+  },
+  {
+    "title": "Juniper Networks – Free Training",
+    "provider": "Juniper Networks",
+    "url": "https://learningportal.juniper.net/juniper/default.aspx",
+    "description": "Free networking and security courses covering Junos OS, routing, switching, and network automation.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Networking"
+    ]
+  },
+  {
+    "title": "OpenClassrooms – Learn Programming with JavaScript",
+    "provider": "OpenClassrooms",
+    "url": "https://openclassrooms.com/en/courses/5664271-learn-programming-with-javascript",
+    "description": "Beginner-friendly JavaScript course with projects and mentor support. Free tier available.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Atlassian – Agile Coach",
+    "provider": "Atlassian",
+    "url": "https://www.atlassian.com/agile",
+    "description": "Free agile coaching resources covering Scrum, Kanban, agile project management, and team practices.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Project Management",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "PMI – Kickoff Course",
+    "provider": "Project Management Institute",
+    "url": "https://www.pmi.org/kickoff",
+    "description": "Free introductory project management course from PMI covering project lifecycle and core PM concepts.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Project Management"
+    ]
+  },
+  {
+    "title": "Harvard – Justice with Michael Sandel",
+    "provider": "Harvard University",
+    "url": "https://www.edx.org/learn/ethics/harvard-university-justice",
+    "description": "Harvard's legendary moral philosophy course exploring justice, equality, democracy, and citizenship.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Humanities & Social Sciences"
+    ]
+  },
+  {
+    "title": "Yale – Introduction to Psychology",
+    "provider": "Coursera (Yale University)",
+    "url": "https://www.coursera.org/learn/introduction-psychology",
+    "description": "Comprehensive introduction to psychology covering the brain, perception, communication, learning, memory, and emotions.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Humanities & Social Sciences"
+    ]
+  },
+  {
+    "title": "Stanford – Introduction to Food and Health",
+    "provider": "Coursera (Stanford University)",
+    "url": "https://www.coursera.org/learn/food-and-health",
+    "description": "Explore the relationship between food and health. Learn practical cooking skills and the evidence behind nutrition advice.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Health & Life Sciences"
+    ]
+  },
+  {
+    "title": "Introduction to Blockchain Technology",
+    "provider": "edX (Berkeley)",
+    "url": "https://www.edx.org/learn/blockchain/university-of-california-berkeley-blockchain-technology",
+    "description": "Learn blockchain fundamentals including Bitcoin, Ethereum, smart contracts, and decentralized applications.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Rust Programming Language – The Book",
+    "provider": "Rust Foundation",
+    "url": "https://doc.rust-lang.org/book/",
+    "description": "The official Rust programming language book. Learn ownership, borrowing, lifetimes, and systems programming concepts.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Go Tour – Learn Go",
+    "provider": "Go Team (Google)",
+    "url": "https://go.dev/tour/",
+    "description": "The official interactive tour of Go covering basics, methods, interfaces, generics, and concurrency.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "TypeScript Handbook",
+    "provider": "Microsoft",
+    "url": "https://www.typescriptlang.org/docs/handbook/",
+    "description": "Official TypeScript handbook covering types, interfaces, classes, generics, modules, and advanced type features.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "Programming Languages",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Terraform Associate Learning Path",
+    "provider": "HashiCorp",
+    "url": "https://developer.hashicorp.com/terraform/tutorials",
+    "description": "Free tutorials covering Infrastructure as Code with Terraform. Learn to provision and manage cloud infrastructure.",
+    "certificate": false,
+    "active": true,
+    "domains": [
+      "DevOps",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Elastic – Free Training Courses",
+    "provider": "Elastic",
+    "url": "https://www.elastic.co/training/free",
+    "description": "Free courses on Elasticsearch, Kibana, Logstash, and Beats. Learn search, analytics, and observability.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "DevOps"
+    ]
+  },
+  {
+    "title": "Databricks – Free Training",
+    "provider": "Databricks",
+    "url": "https://www.databricks.com/learn",
+    "description": "Free courses on Apache Spark, data engineering, and lakehouse architecture. Self-paced with hands-on labs.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Snowflake – Free Hands-on Essentials",
+    "provider": "Snowflake",
+    "url": "https://learn.snowflake.com/",
+    "description": "Free training on Snowflake's cloud data platform covering data warehousing, sharing, and analytics.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Data & Analytics",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Meta Front-End Developer Certificate",
+    "provider": "Coursera (Meta)",
+    "url": "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+    "description": "Meta's professional certificate covering HTML, CSS, JavaScript, React, and version control. Free to audit.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Meta Back-End Developer Certificate",
+    "provider": "Coursera (Meta)",
+    "url": "https://www.coursera.org/professional-certificates/meta-back-end-developer",
+    "description": "Learn Python, Django, MySQL, and APIs. Build the back-end of web applications. Free to audit.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "IBM Full Stack Software Developer",
+    "provider": "Coursera (IBM)",
+    "url": "https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer",
+    "description": "Develop full-stack cloud applications using HTML, CSS, JavaScript, Node.js, React, Python, Django, and cloud services.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "University of Michigan – Web Design for Everybody",
+    "provider": "Coursera (University of Michigan)",
+    "url": "https://www.coursera.org/specializations/web-design",
+    "description": "Specialization covering HTML5, CSS3, JavaScript, and responsive design. Build accessible, mobile-friendly websites.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development",
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "Udemy – Python for Absolute Beginners",
+    "provider": "Udemy",
+    "url": "https://www.udemy.com/course/free-python/",
+    "description": "Free introductory Python course for absolute beginners. Covers installation, syntax, data types, and basic programs.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Udemy – Introduction to Web Development",
+    "provider": "Udemy",
+    "url": "https://www.udemy.com/course/web-development-learn-by-doing-html5-css3-from-scratch-introductory/",
+    "description": "Free introduction to HTML and CSS fundamentals. Build web pages from scratch with hands-on exercises.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Sophia Learning – Introduction to IT",
+    "provider": "Sophia Learning",
+    "url": "https://www.sophia.org/online-courses/information-technology",
+    "description": "Self-paced IT fundamentals course covering hardware, software, networking, databases, and security concepts.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Sophia Learning – Introduction to Web Development",
+    "provider": "Sophia Learning",
+    "url": "https://www.sophia.org/online-courses/introduction-to-web-development",
+    "description": "Learn HTML, CSS, and JavaScript basics. Build responsive web pages with modern design principles.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Web Development"
+    ]
+  },
+  {
+    "title": "edX – Cybersecurity Basics",
+    "provider": "edX (Rochester Institute of Technology)",
+    "url": "https://www.edx.org/learn/cybersecurity",
+    "description": "Understand cybersecurity threats, vulnerabilities, and defense strategies. Free to audit on edX.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Cybersecurity"
+    ]
+  },
+  {
+    "title": "Google Workspace Fundamentals",
+    "provider": "Google",
+    "url": "https://cloud.google.com/training/workspace",
+    "description": "Learn to use Google Workspace tools effectively: Docs, Sheets, Slides, Drive, and collaboration features.",
+    "certificate": true,
+    "active": true,
+    "domains": [
+      "Information Technology & Computing",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Claude 101",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Introduction to Claude covering core capabilities, use cases, and best practices. 12 lectures, 1 hour of video content.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "AI Fluency: Framework & Foundations",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "Comprehensive course on AI fluency with 14 lectures covering frameworks for understanding and collaborating with AI effectively. Includes quiz and certificate.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Personal Development"
+    ]
+  },
+  {
+    "title": "Building with the Claude API",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Deep-dive into Claude API development with 84 lectures and 8+ hours of video. Covers prompting, tool use, streaming, embeddings, and production deployment. 10 quizzes.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Claude Code in Action",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn to use Claude Code for software development. 15 lectures covering agentic coding, debugging, refactoring, and building with AI assistance.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Introduction to Model Context Protocol (MCP)",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn the Model Context Protocol standard for connecting AI models to external tools and data sources. 16 lectures with quiz.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Model Context Protocol: Advanced Topics",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Advanced MCP concepts including custom server development, security, and production architecture. 15 lectures, 2 quizzes.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Introduction to Agent Skills",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn to create and use agent skills for Claude Code. 6 lectures, 30 minutes of video covering skill design and implementation.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Introduction to Subagents",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Master subagent architecture for Claude Code. 4 lectures covering multi-agent workflows and task delegation.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "AI Fluency for Educators",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "Designed for educators to understand and teach AI concepts. 4 lectures, 24 minutes of practical guidance on AI in education.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Personal Development"
+    ]
+  },
+  {
+    "title": "AI Fluency for Students",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "Student-focused AI literacy course. 5 lectures covering responsible AI use, prompt engineering, and academic applications.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Personal Development"
+    ]
+  },
+  {
+    "title": "Teaching AI Fluency",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "For instructors teaching AI concepts. 7 lectures with pedagogical frameworks for AI education. Includes quiz and certificate.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Personal Development"
+    ]
+  },
+  {
+    "title": "AI Fluency for Nonprofits",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "AI applications for nonprofit organizations. 9 lectures covering use cases, implementation, and ethical considerations.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "Claude with Amazon Bedrock",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Deploy and use Claude through AWS Bedrock. 85 lectures, 8 hours of video covering integration, scaling, and enterprise patterns.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Claude with Google Cloud's Vertex AI",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Integrate Claude with Google Cloud Vertex AI. 85 lectures, 8 hours of content covering deployment, fine-tuning, and production use.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Introduction to Claude Cowork",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn Claude Cowork for team productivity and collaborative AI workflows in professional settings.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Business & Management"
+    ]
+  },
+  {
+    "title": "OpenAI API Tutorials & Cookbook",
+    "provider": "OpenAI",
+    "url": "https://platform.openai.com/docs/tutorials",
+    "description": "Official OpenAI tutorials covering GPT API integration, embeddings, fine-tuning, function calling, and building AI applications.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "OpenAI Prompt Engineering Guide",
+    "provider": "OpenAI",
+    "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+    "description": "Official best practices for prompt engineering with GPT models. Covers strategies for better outputs, few-shot prompting, and chain-of-thought.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "NVIDIA DLI – Getting Started with Deep Learning",
+    "provider": "NVIDIA",
+    "url": "https://www.nvidia.com/en-us/training/online/",
+    "description": "NVIDIA Deep Learning Institute free courses covering neural networks, CNNs, and GPU-accelerated deep learning fundamentals.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "NVIDIA DLI – Generative AI Explained",
+    "provider": "NVIDIA",
+    "url": "https://courses.nvidia.com/courses/course-v1:DLI+S-FX-07+V1",
+    "description": "Free self-paced course explaining generative AI concepts, LLMs, diffusion models, and their applications. Includes certificate.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "NVIDIA DLI – Building RAG Agents with LLMs",
+    "provider": "NVIDIA",
+    "url": "https://courses.nvidia.com/courses/course-v1:DLI+S-FX-15+V1",
+    "description": "Learn to build Retrieval-Augmented Generation agents using LLMs, vector databases, and NVIDIA NeMo framework.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "PyTorch Tutorials – Learn PyTorch",
+    "provider": "Meta (PyTorch)",
+    "url": "https://pytorch.org/tutorials/",
+    "description": "Official PyTorch tutorials covering tensors, neural networks, transfer learning, NLP, computer vision, and deployment.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Cohere LLM University",
+    "provider": "Cohere",
+    "url": "https://cohere.com/llmu",
+    "description": "Free comprehensive NLP and LLM curriculum. Covers text classification, embeddings, semantic search, RAG, and fine-tuning.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "LlamaIndex – Build LLM Applications",
+    "provider": "LlamaIndex",
+    "url": "https://docs.llamaindex.ai/en/stable/",
+    "description": "Free documentation and tutorials for building LLM-powered data applications with RAG, agents, and structured outputs.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Weights & Biases – ML Courses",
+    "provider": "Weights & Biases",
+    "url": "https://www.wandb.courses/",
+    "description": "Free courses on ML experiment tracking, LLM engineering, building LLM apps, and evaluating ML models.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Stanford CS229 – Machine Learning",
+    "provider": "Stanford University",
+    "url": "https://cs229.stanford.edu/",
+    "description": "Andrew Ng's Stanford ML course. Covers supervised learning, unsupervised learning, learning theory, reinforcement learning, and deep learning.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Mathematics"
+    ]
+  },
+  {
+    "title": "Stanford CS224N – Natural Language Processing with Deep Learning",
+    "provider": "Stanford University",
+    "url": "https://web.stanford.edu/class/cs224n/",
+    "description": "Deep learning approaches to NLP. Covers word vectors, transformers, pretraining, attention, and language generation.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Stanford CS231N – Deep Learning for Computer Vision",
+    "provider": "Stanford University",
+    "url": "https://cs231n.stanford.edu/",
+    "description": "Covers convolutional networks, image classification, object detection, segmentation, and generative models for visual recognition.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "MIT 6.S191 – Introduction to Deep Learning",
+    "provider": "MIT",
+    "url": "https://introtodeeplearning.com/",
+    "description": "MIT's introductory course on deep learning covering neural networks, CNNs, RNNs, generative models, and reinforcement learning with TensorFlow labs.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Full Stack LLM Bootcamp",
+    "provider": "The Full Stack",
+    "url": "https://fullstackdeeplearning.com/llm-bootcamp/",
+    "description": "Free bootcamp on building LLM-powered applications. Covers prompt engineering, LLMOps, UX design for AI, and launching AI products.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Web Development"
+    ]
+  },
+  {
+    "title": "Prompt Engineering Guide",
+    "provider": "DAIR.AI",
+    "url": "https://www.promptingguide.ai/",
+    "description": "Comprehensive open-source guide to prompt engineering. Covers techniques, applications, risks, and advanced strategies for all major LLMs.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Microsoft Copilot Learning Path",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/training/paths/copilot/",
+    "description": "Learn to use Microsoft Copilot across Microsoft 365, GitHub, and Azure. Covers prompt engineering and AI-assisted workflows.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Information Technology & Computing"
+    ]
+  },
+  {
+    "title": "Google Responsible AI",
+    "provider": "Google",
+    "url": "https://ai.google/responsibility/responsible-ai-practices/",
+    "description": "Google's resources on responsible AI development. Covers fairness, interpretability, privacy, safety, and inclusive design.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Google Gemini API Tutorials",
+    "provider": "Google",
+    "url": "https://ai.google.dev/tutorials",
+    "description": "Official tutorials for building with Google's Gemini API. Covers text generation, multimodal inputs, function calling, and embeddings.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Stability AI – Stable Diffusion Documentation",
+    "provider": "Stability AI",
+    "url": "https://platform.stability.ai/docs/getting-started",
+    "description": "Learn to use Stability AI's image generation models. Covers text-to-image, image-to-image, inpainting, and API integration.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "Mistral AI – Documentation & Guides",
+    "provider": "Mistral AI",
+    "url": "https://docs.mistral.ai/",
+    "description": "Learn to build with Mistral's open-weight LLMs. Covers API usage, fine-tuning, RAG, function calling, and deployment.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "Vertex AI Generative AI Learning Path",
+    "provider": "Google Cloud",
+    "url": "https://www.cloudskillsboost.google/paths/183",
+    "description": "Google Cloud's learning path for generative AI. Covers LLMs, responsible AI, prompt design, and Vertex AI Studio.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Azure AI Fundamentals – Generative AI",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/training/paths/introduction-generative-ai/",
+    "description": "Microsoft's learning path on generative AI fundamentals covering LLMs, Azure OpenAI Service, responsible AI, and prompt engineering.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "AWS Generative AI Foundations",
+    "provider": "Amazon Web Services",
+    "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/17904/generative-ai-foundations-on-aws",
+    "description": "AWS fundamentals of generative AI covering LLMs, foundation models, Amazon Bedrock, and practical AI applications.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Cloud Computing"
+    ]
+  },
+  {
+    "title": "Hugging Face – Audio Course",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn/audio-course",
+    "description": "Learn audio processing with transformers. Covers speech recognition, text-to-speech, audio classification, and music generation.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML"
+    ]
+  },
+  {
+    "title": "Hugging Face – Diffusion Models Course",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn/diffusion-course",
+    "description": "Learn diffusion models from scratch. Covers DDPM, stable diffusion, fine-tuning, and building pipelines.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Design & Creative"
+    ]
+  },
+  {
+    "title": "TensorFlow Developer Certificate Prep",
+    "provider": "Google (TensorFlow)",
+    "url": "https://www.tensorflow.org/resources/learn-ml",
+    "description": "Free resources to learn TensorFlow for machine learning. Covers image classification, NLP, time series, and generative models.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "Programming Languages"
+    ]
+  },
+  {
+    "title": "MLflow – ML Lifecycle Management",
+    "provider": "Databricks (MLflow)",
+    "url": "https://mlflow.org/docs/latest/tutorials-and-examples/index.html",
+    "description": "Learn ML experiment tracking, model packaging, and deployment with MLflow. Free open-source tutorials and examples.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": [
+      "AI & ML",
+      "DevOps"
+    ]
+  }
+];

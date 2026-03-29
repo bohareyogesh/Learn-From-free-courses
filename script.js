@@ -8,7 +8,13 @@
   const COURSES_PER_PAGE = 24;
   const STORAGE_KEY_BOOKMARKS = 'fcf_bookmarks';
   const STORAGE_KEY_THEME = 'fcf_theme';
+  const STORAGE_KEY_APIKEY = 'fcf_openrouter_key';
+  const STORAGE_KEY_USER_COURSES = 'fcf_user_courses';
+  const STORAGE_KEY_REMOVED = 'fcf_removed_courses';
+  const STORAGE_KEY_LAST_UPDATE = 'fcf_last_update';
+  const CREATOR_NAME = 'Yogesh Mahesh Bohare';
 
+  let baseCourses = [];
   let allCourses = [];
   let filteredCourses = [];
   let currentPage = 1;
@@ -85,29 +91,90 @@
     return bookmarks.includes(key);
   }
 
+  // ── User Course Storage ──
+  function getUserCourses() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY_USER_COURSES)) || []; }
+    catch { return []; }
+  }
+  function saveUserCourses(courses) {
+    localStorage.setItem(STORAGE_KEY_USER_COURSES, JSON.stringify(courses));
+  }
+  function getRemovedKeys() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY_REMOVED)) || []; }
+    catch { return []; }
+  }
+  function saveRemovedKeys(keys) {
+    localStorage.setItem(STORAGE_KEY_REMOVED, JSON.stringify(keys));
+  }
+
+  function addUserCourse(course) {
+    const list = getUserCourses();
+    const key = courseKey(course);
+    if (!list.some(c => courseKey(c) === key)) {
+      list.push(course);
+      saveUserCourses(list);
+    }
+  }
+
+  function removeCourse(key) {
+    const list = getRemovedKeys();
+    if (!list.includes(key)) {
+      list.push(key);
+      saveRemovedKeys(list);
+    }
+  }
+
+  function undoRemoveCourse(key) {
+    const list = getRemovedKeys().filter(k => k !== key);
+    saveRemovedKeys(list);
+  }
+
+  function mergeCourses() {
+    const userCourses = getUserCourses();
+    const removedKeys = getRemovedKeys();
+    const merged = [...baseCourses];
+
+    userCourses.forEach(uc => {
+      if (!merged.some(c => courseKey(c) === courseKey(uc))) {
+        merged.push(uc);
+      }
+    });
+
+    allCourses = merged.filter(c => !removedKeys.includes(courseKey(c)));
+  }
+
   // ── Data Loading ──
   async function fetchCourses() {
     showSkeletons();
     let data = null;
 
-    if (window.location.protocol !== 'file:') {
+    // Priority 1: global variable from courses-data.js (works on file:// and http://)
+    if (window.COURSE_DATABASE && Array.isArray(window.COURSE_DATABASE) && window.COURSE_DATABASE.length > 0) {
+      data = window.COURSE_DATABASE;
+    }
+
+    // Priority 2: fetch courses.json (works on http:// servers)
+    if (!data) {
       try {
         const base = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
         const resp = await fetch(base + 'courses.json', { cache: 'no-store' });
         if (resp.ok) data = await resp.json();
       } catch (err) {
-        console.warn('Failed to load courses.json:', err);
+        console.warn('courses.json fetch failed, using embedded data:', err);
       }
     }
 
-    if (!data || !Array.isArray(data)) {
+    // Priority 3: minimal embedded fallback
+    if (!data || !Array.isArray(data) || data.length === 0) {
       data = getEmbeddedCourses();
     }
 
-    allCourses = data;
+    baseCourses = data;
+    mergeCourses();
     populateFilters();
-    updateStats();
+    updateHeaderStats();
     applyFilters();
+    autoUpdateCheck();
   }
 
   function showSkeletons() {
@@ -155,7 +222,7 @@
   }
 
   // ── Stats ──
-  function updateStats() {
+  function updateHeaderStats() {
     const providers = new Set(allCourses.map(c => c.provider));
     const domains = new Set();
     allCourses.forEach(c => { if (c.domains) c.domains.forEach(d => domains.add(d)); });
@@ -352,6 +419,12 @@
       { name: 'Codecademy', url: 'https://www.codecademy.com/catalog', icon: '&#128187;' },
       { name: 'SoloLearn', url: 'https://www.sololearn.com/', icon: '&#128241;' },
       { name: 'Exercism', url: 'https://exercism.org/', icon: '&#127947;' },
+      { name: 'Anthropic Academy', url: 'https://www.anthropic.com/learn', icon: '&#9889;' },
+      { name: 'OpenAI Tutorials', url: 'https://platform.openai.com/docs/tutorials', icon: '&#129302;' },
+      { name: 'NVIDIA DLI', url: 'https://www.nvidia.com/en-us/training/online/', icon: '&#128187;' },
+      { name: 'Cohere LLM University', url: 'https://cohere.com/llmu', icon: '&#129504;' },
+      { name: 'Weights & Biases', url: 'https://www.wandb.courses/', icon: '&#128202;' },
+      { name: 'Mistral AI Docs', url: 'https://docs.mistral.ai/', icon: '&#9889;' },
     ];
 
     aggregatorLinks.innerHTML = platforms.map(p =>
@@ -429,6 +502,376 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // ── AI Recommender ──
+  const aiFab = $('aiFab');
+  const aiModal = $('aiModal');
+  const aiModalClose = $('aiModalClose');
+  const aiPrompt = $('aiPrompt');
+  const aiSend = $('aiSend');
+  const aiResponse = $('aiResponse');
+  const settingsToggle = $('settingsToggle');
+  const settingsPanel = $('settingsPanel');
+  const apiKeyInput = $('apiKeyInput');
+  const saveApiKeyBtn = $('saveApiKey');
+  const keyStatus = $('keyStatus');
+
+  function getApiKey() {
+    return localStorage.getItem(STORAGE_KEY_APIKEY) || '';
+  }
+
+  function initApiKeyUI() {
+    const key = getApiKey();
+    if (key) {
+      apiKeyInput.value = key;
+      keyStatus.textContent = 'Key saved';
+      keyStatus.className = 'key-status saved';
+    } else {
+      keyStatus.textContent = 'No key set';
+      keyStatus.className = 'key-status missing';
+    }
+  }
+
+  saveApiKeyBtn.addEventListener('click', () => {
+    const key = apiKeyInput.value.trim();
+    if (key) {
+      localStorage.setItem(STORAGE_KEY_APIKEY, key);
+      keyStatus.textContent = 'Key saved';
+      keyStatus.className = 'key-status saved';
+    } else {
+      localStorage.removeItem(STORAGE_KEY_APIKEY);
+      keyStatus.textContent = 'Key removed';
+      keyStatus.className = 'key-status missing';
+    }
+  });
+
+  aiFab.addEventListener('click', () => {
+    aiModal.classList.add('open');
+    initApiKeyUI();
+    aiPrompt.focus();
+  });
+
+  aiModalClose.addEventListener('click', () => {
+    aiModal.classList.remove('open');
+  });
+
+  aiModal.addEventListener('click', (e) => {
+    if (e.target === aiModal) aiModal.classList.remove('open');
+  });
+
+  settingsToggle.addEventListener('click', () => {
+    settingsPanel.classList.toggle('open');
+  });
+
+  aiSend.addEventListener('click', () => sendAiRequest());
+  aiPrompt.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendAiRequest();
+    }
+  });
+
+  async function sendAiRequest() {
+    const question = aiPrompt.value.trim();
+    if (!question) return;
+
+    const apiKey = getApiKey();
+    if (!apiKey) {
+      aiResponse.textContent = 'Please set your OpenRouter API key first. Click "API Settings" below to add it.';
+      settingsPanel.classList.add('open');
+      return;
+    }
+
+    aiSend.disabled = true;
+    aiSend.textContent = 'Thinking...';
+    aiResponse.innerHTML = '<span class="typing">Analyzing courses and generating recommendations...</span>';
+
+    const courseSummary = allCourses.map((c, i) =>
+      `${i + 1}. "${c.title}" by ${c.provider} | ${c.certificate ? 'Certificate' : 'No cert'} | ${c.isAI ? 'AI' : ''} | Domains: ${(c.domains || []).join(', ')} | URL: ${c.url}`
+    ).join('\n');
+
+    const systemPrompt = `You are a helpful course advisor. The user has access to a database of ${allCourses.length} free courses. Based on their request, recommend the BEST matching courses from this database. For each recommendation, include the course title, provider, why it's a good fit, and the URL. Format your response clearly with numbered recommendations. If fewer than 3 courses match, suggest what they could search for on the aggregator platforms. Be concise and helpful.
+
+Here is the complete course database:
+${courseSummary}`;
+
+    try {
+      const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+          'HTTP-Referer': window.location.href,
+          'X-Title': 'Free Course Finder'
+        },
+        body: JSON.stringify({
+          model: 'google/gemini-2.0-flash-001',
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: question }
+          ],
+          max_tokens: 1500,
+          temperature: 0.3
+        })
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({}));
+        throw new Error(err.error?.message || `API error ${resp.status}`);
+      }
+
+      const data = await resp.json();
+      const reply = data.choices?.[0]?.message?.content || 'No response received.';
+      aiResponse.textContent = reply;
+    } catch (err) {
+      aiResponse.textContent = `Error: ${err.message}\n\nPlease check your API key and try again.`;
+    } finally {
+      aiSend.disabled = false;
+      aiSend.textContent = 'Ask AI';
+    }
+  }
+
+  // ── Smart Update System ──
+  const smartUpdateBtn = $('smartUpdateBtn');
+  const updateModal = $('updateModal');
+  const updateModalClose = $('updateModalClose');
+  const findNewCoursesBtn = $('findNewCoursesBtn');
+  const validateCoursesBtn = $('validateCoursesBtn');
+  const updateResponse = $('updateResponse');
+  const updateStats = $('updateStats');
+  const updateBar = $('updateBar');
+  const updateBarText = $('updateBarText');
+  const updateBarAction = $('updateBarAction');
+  const updateBarDismiss = $('updateBarDismiss');
+
+  smartUpdateBtn.addEventListener('click', () => {
+    if (!getApiKey()) {
+      aiFab.click();
+      settingsPanel.classList.add('open');
+      return;
+    }
+    updateModal.classList.add('open');
+  });
+
+  updateModalClose.addEventListener('click', () => updateModal.classList.remove('open'));
+  updateModal.addEventListener('click', (e) => { if (e.target === updateModal) updateModal.classList.remove('open'); });
+
+  updateBarDismiss.addEventListener('click', () => updateBar.classList.remove('visible'));
+  updateBarAction.addEventListener('click', () => {
+    updateBar.classList.remove('visible');
+    updateModal.classList.add('open');
+  });
+
+  async function callOpenRouter(systemMsg, userMsg) {
+    const apiKey = getApiKey();
+    const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+        'HTTP-Referer': window.location.href,
+        'X-Title': 'Free Course Finder'
+      },
+      body: JSON.stringify({
+        model: 'google/gemini-2.0-flash-001',
+        messages: [
+          { role: 'system', content: systemMsg },
+          { role: 'user', content: userMsg }
+        ],
+        max_tokens: 3000,
+        temperature: 0.2
+      })
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err.error?.message || `API error ${resp.status}`);
+    }
+    const data = await resp.json();
+    return data.choices?.[0]?.message?.content || '';
+  }
+
+  findNewCoursesBtn.addEventListener('click', async () => {
+    findNewCoursesBtn.disabled = true;
+    findNewCoursesBtn.textContent = 'Searching...';
+    updateResponse.innerHTML = '<span class="typing">Searching the internet for new free courses...</span>';
+
+    const existingTitles = allCourses.map(c => c.title).join(', ');
+
+    try {
+      const reply = await callOpenRouter(
+        `You are a course discovery assistant. The user has a database of free courses. Search your knowledge for NEW free courses and certifications available on the internet in 2025-2026 that are NOT already in their database. Focus on courses from major platforms that are genuinely free (not free trials).
+
+Return ONLY a valid JSON array of new course objects. Each object must have: title, provider, url, description, certificate (boolean), active (boolean), isAI (boolean), domains (string array). Return at least 5 and at most 15 courses. Do NOT include any courses already in the database. Return ONLY the JSON array, no other text.`,
+        `Here are the courses already in my database (do NOT suggest these):\n${existingTitles}\n\nFind new free courses available on the internet that are NOT in this list.`
+      );
+
+      let newCourses = [];
+      try {
+        const jsonMatch = reply.match(/\[[\s\S]*\]/);
+        if (jsonMatch) newCourses = JSON.parse(jsonMatch[0]);
+      } catch {
+        updateResponse.textContent = 'Could not parse AI response. Raw response:\n\n' + reply;
+        return;
+      }
+
+      if (!newCourses.length) {
+        updateResponse.textContent = 'No new courses found. Your database appears up to date!';
+        return;
+      }
+
+      let html = `<p style="font-weight:700;margin-bottom:10px;">Found ${newCourses.length} new courses:</p><ul class="update-list">`;
+      newCourses.forEach((c, i) => {
+        html += `<li class="update-item" id="new-${i}">
+          <div class="info">
+            <div class="title">${escapeHtml(c.title)}</div>
+            <div class="provider">${escapeHtml(c.provider)}</div>
+            <div class="desc">${escapeHtml(c.description || '')}</div>
+          </div>
+          <button class="btn-add-course" data-idx="${i}">+ Add</button>
+        </li>`;
+      });
+      html += '</ul>';
+      updateResponse.innerHTML = html;
+
+      updateResponse.querySelectorAll('.btn-add-course').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-idx'));
+          const course = newCourses[idx];
+          if (course) {
+            addUserCourse(course);
+            mergeCourses();
+            populateFilters();
+            updateStatsFn();
+            applyFilters();
+            btn.textContent = 'Added!';
+            btn.disabled = true;
+            btn.style.background = 'var(--text-muted)';
+          }
+        });
+      });
+
+      updateStats.textContent = `${newCourses.length} new courses found. Click "Add" to include them.`;
+    } catch (err) {
+      updateResponse.textContent = `Error: ${err.message}`;
+    } finally {
+      findNewCoursesBtn.disabled = false;
+      findNewCoursesBtn.textContent = '\u{1F50D} Find New Courses';
+    }
+  });
+
+  validateCoursesBtn.addEventListener('click', async () => {
+    validateCoursesBtn.disabled = true;
+    validateCoursesBtn.textContent = 'Validating...';
+    updateResponse.innerHTML = '<span class="typing">Analyzing courses for validity...</span>';
+
+    const courseList = allCourses.map(c => `"${c.title}" by ${c.provider} | URL: ${c.url}`).join('\n');
+
+    try {
+      const reply = await callOpenRouter(
+        `You are a course validation assistant. Analyze the following list of free online courses. Identify courses that are likely NO LONGER available, have been discontinued, moved to paid-only, or have broken/invalid URLs based on your knowledge. 
+
+Return ONLY a valid JSON array of objects with: { "title": "...", "url": "...", "reason": "why it may be invalid" }. If all courses appear valid, return an empty array []. Return ONLY the JSON array, no other text.`,
+        `Validate these courses:\n${courseList}`
+      );
+
+      let invalidCourses = [];
+      try {
+        const jsonMatch = reply.match(/\[[\s\S]*\]/);
+        if (jsonMatch) invalidCourses = JSON.parse(jsonMatch[0]);
+      } catch {
+        updateResponse.textContent = 'Could not parse AI response. Raw response:\n\n' + reply;
+        return;
+      }
+
+      if (!invalidCourses.length) {
+        updateResponse.innerHTML = '<p style="color:var(--green);font-weight:700;">All courses appear valid! Your database is up to date.</p>';
+        updateStats.textContent = 'Validation complete. 0 issues found.';
+        return;
+      }
+
+      let html = `<p style="font-weight:700;margin-bottom:10px;">${invalidCourses.length} potentially invalid courses found:</p><ul class="update-list">`;
+      invalidCourses.forEach((ic, i) => {
+        const match = allCourses.find(c => c.url === ic.url || c.title === ic.title);
+        const key = match ? courseKey(match) : '';
+        html += `<li class="update-item" id="inv-${i}">
+          <div class="info">
+            <div class="title">${escapeHtml(ic.title)}</div>
+            <div class="desc" style="color:var(--red);">${escapeHtml(ic.reason || 'May be unavailable')}</div>
+          </div>
+          <button class="btn-remove-course" data-key="${escapeHtml(key)}" ${!key ? 'disabled' : ''}>Remove</button>
+        </li>`;
+      });
+      html += '</ul>';
+      updateResponse.innerHTML = html;
+
+      updateResponse.querySelectorAll('.btn-remove-course').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-key');
+          if (key) {
+            removeCourse(key);
+            mergeCourses();
+            populateFilters();
+            updateStatsFn();
+            applyFilters();
+            btn.textContent = 'Removed';
+            btn.disabled = true;
+            btn.style.background = 'var(--text-muted)';
+          }
+        });
+      });
+
+      updateStats.textContent = `${invalidCourses.length} issues found. Review and remove invalid courses.`;
+    } catch (err) {
+      updateResponse.textContent = `Error: ${err.message}`;
+    } finally {
+      validateCoursesBtn.disabled = false;
+      validateCoursesBtn.textContent = '\u2713 Validate Existing';
+    }
+  });
+
+  function updateStatsFn() { updateHeaderStats(); }
+
+  // ── Auto Update Check ──
+  function autoUpdateCheck() {
+    if (!navigator.onLine || !getApiKey()) return;
+
+    const lastUpdate = parseInt(localStorage.getItem(STORAGE_KEY_LAST_UPDATE) || '0');
+    const hoursSinceUpdate = (Date.now() - lastUpdate) / (1000 * 60 * 60);
+
+    if (hoursSinceUpdate < 24) return;
+
+    localStorage.setItem(STORAGE_KEY_LAST_UPDATE, Date.now().toString());
+    updateBarText.textContent = 'You\'re online! Use Smart Update to find new courses and validate existing ones.';
+    updateBar.classList.add('visible');
+  }
+
+  // ── Creator Attribution Protection ──
+  function protectCreator() {
+    const badge = $('creatorBadge');
+    const footer = $('creatorFooter');
+    const expectedBadge = `Created by <strong>${CREATOR_NAME}</strong>`;
+    const expectedFooter = `Created by ${CREATOR_NAME}`;
+
+    function restore() {
+      if (badge && badge.innerHTML !== expectedBadge) badge.innerHTML = expectedBadge;
+      if (footer && footer.textContent !== expectedFooter) footer.textContent = expectedFooter;
+    }
+
+    restore();
+
+    if (typeof MutationObserver !== 'undefined') {
+      const observe = (el) => {
+        if (!el) return;
+        new MutationObserver(restore).observe(el, {
+          childList: true, characterData: true, subtree: true
+        });
+      };
+      observe(badge);
+      observe(footer);
+    }
+
+    setInterval(restore, 5000);
+  }
+
   // ── Embedded Fallback ──
   function getEmbeddedCourses() {
     return [
@@ -449,7 +892,9 @@
 
   // ── Init ──
   initTheme();
+  initApiKeyUI();
   renderAggregatorLinks();
+  protectCreator();
   fetchCourses();
 
 })();

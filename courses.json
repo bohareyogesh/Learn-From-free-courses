@@ -1823,5 +1823,425 @@
     "certificate": true,
     "active": true,
     "domains": ["Information Technology & Computing", "Business & Management"]
+  },
+  {
+    "title": "Claude 101",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Introduction to Claude covering core capabilities, use cases, and best practices. 12 lectures, 1 hour of video content.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "AI Fluency: Framework & Foundations",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "Comprehensive course on AI fluency with 14 lectures covering frameworks for understanding and collaborating with AI effectively. Includes quiz and certificate.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Personal Development"]
+  },
+  {
+    "title": "Building with the Claude API",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Deep-dive into Claude API development with 84 lectures and 8+ hours of video. Covers prompting, tool use, streaming, embeddings, and production deployment. 10 quizzes.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Claude Code in Action",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn to use Claude Code for software development. 15 lectures covering agentic coding, debugging, refactoring, and building with AI assistance.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Introduction to Model Context Protocol (MCP)",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn the Model Context Protocol standard for connecting AI models to external tools and data sources. 16 lectures with quiz.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Model Context Protocol: Advanced Topics",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Advanced MCP concepts including custom server development, security, and production architecture. 15 lectures, 2 quizzes.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Introduction to Agent Skills",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn to create and use agent skills for Claude Code. 6 lectures, 30 minutes of video covering skill design and implementation.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Introduction to Subagents",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Master subagent architecture for Claude Code. 4 lectures covering multi-agent workflows and task delegation.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "AI Fluency for Educators",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "Designed for educators to understand and teach AI concepts. 4 lectures, 24 minutes of practical guidance on AI in education.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Personal Development"]
+  },
+  {
+    "title": "AI Fluency for Students",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "Student-focused AI literacy course. 5 lectures covering responsible AI use, prompt engineering, and academic applications.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Personal Development"]
+  },
+  {
+    "title": "Teaching AI Fluency",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "For instructors teaching AI concepts. 7 lectures with pedagogical frameworks for AI education. Includes quiz and certificate.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Personal Development"]
+  },
+  {
+    "title": "AI Fluency for Nonprofits",
+    "provider": "Anthropic Academy",
+    "url": "https://www.anthropic.com/learn",
+    "description": "AI applications for nonprofit organizations. 9 lectures covering use cases, implementation, and ethical considerations.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Business & Management"]
+  },
+  {
+    "title": "Claude with Amazon Bedrock",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Deploy and use Claude through AWS Bedrock. 85 lectures, 8 hours of video covering integration, scaling, and enterprise patterns.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Cloud Computing"]
+  },
+  {
+    "title": "Claude with Google Cloud's Vertex AI",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Integrate Claude with Google Cloud Vertex AI. 85 lectures, 8 hours of content covering deployment, fine-tuning, and production use.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Cloud Computing"]
+  },
+  {
+    "title": "Introduction to Claude Cowork",
+    "provider": "Anthropic Academy",
+    "url": "https://claude.com/resources/courses",
+    "description": "Learn Claude Cowork for team productivity and collaborative AI workflows in professional settings.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Business & Management"]
+  },
+  {
+    "title": "OpenAI API Tutorials & Cookbook",
+    "provider": "OpenAI",
+    "url": "https://platform.openai.com/docs/tutorials",
+    "description": "Official OpenAI tutorials covering GPT API integration, embeddings, fine-tuning, function calling, and building AI applications.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "OpenAI Prompt Engineering Guide",
+    "provider": "OpenAI",
+    "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+    "description": "Official best practices for prompt engineering with GPT models. Covers strategies for better outputs, few-shot prompting, and chain-of-thought.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "NVIDIA DLI – Getting Started with Deep Learning",
+    "provider": "NVIDIA",
+    "url": "https://www.nvidia.com/en-us/training/online/",
+    "description": "NVIDIA Deep Learning Institute free courses covering neural networks, CNNs, and GPU-accelerated deep learning fundamentals.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "NVIDIA DLI – Generative AI Explained",
+    "provider": "NVIDIA",
+    "url": "https://courses.nvidia.com/courses/course-v1:DLI+S-FX-07+V1",
+    "description": "Free self-paced course explaining generative AI concepts, LLMs, diffusion models, and their applications. Includes certificate.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "NVIDIA DLI – Building RAG Agents with LLMs",
+    "provider": "NVIDIA",
+    "url": "https://courses.nvidia.com/courses/course-v1:DLI+S-FX-15+V1",
+    "description": "Learn to build Retrieval-Augmented Generation agents using LLMs, vector databases, and NVIDIA NeMo framework.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "PyTorch Tutorials – Learn PyTorch",
+    "provider": "Meta (PyTorch)",
+    "url": "https://pytorch.org/tutorials/",
+    "description": "Official PyTorch tutorials covering tensors, neural networks, transfer learning, NLP, computer vision, and deployment.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Cohere LLM University",
+    "provider": "Cohere",
+    "url": "https://cohere.com/llmu",
+    "description": "Free comprehensive NLP and LLM curriculum. Covers text classification, embeddings, semantic search, RAG, and fine-tuning.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "LlamaIndex – Build LLM Applications",
+    "provider": "LlamaIndex",
+    "url": "https://docs.llamaindex.ai/en/stable/",
+    "description": "Free documentation and tutorials for building LLM-powered data applications with RAG, agents, and structured outputs.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Weights & Biases – ML Courses",
+    "provider": "Weights & Biases",
+    "url": "https://www.wandb.courses/",
+    "description": "Free courses on ML experiment tracking, LLM engineering, building LLM apps, and evaluating ML models.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "Stanford CS229 – Machine Learning",
+    "provider": "Stanford University",
+    "url": "https://cs229.stanford.edu/",
+    "description": "Andrew Ng's Stanford ML course. Covers supervised learning, unsupervised learning, learning theory, reinforcement learning, and deep learning.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Mathematics"]
+  },
+  {
+    "title": "Stanford CS224N – Natural Language Processing with Deep Learning",
+    "provider": "Stanford University",
+    "url": "https://web.stanford.edu/class/cs224n/",
+    "description": "Deep learning approaches to NLP. Covers word vectors, transformers, pretraining, attention, and language generation.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "Stanford CS231N – Deep Learning for Computer Vision",
+    "provider": "Stanford University",
+    "url": "https://cs231n.stanford.edu/",
+    "description": "Covers convolutional networks, image classification, object detection, segmentation, and generative models for visual recognition.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "MIT 6.S191 – Introduction to Deep Learning",
+    "provider": "MIT",
+    "url": "https://introtodeeplearning.com/",
+    "description": "MIT's introductory course on deep learning covering neural networks, CNNs, RNNs, generative models, and reinforcement learning with TensorFlow labs.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "Full Stack LLM Bootcamp",
+    "provider": "The Full Stack",
+    "url": "https://fullstackdeeplearning.com/llm-bootcamp/",
+    "description": "Free bootcamp on building LLM-powered applications. Covers prompt engineering, LLMOps, UX design for AI, and launching AI products.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Web Development"]
+  },
+  {
+    "title": "Prompt Engineering Guide",
+    "provider": "DAIR.AI",
+    "url": "https://www.promptingguide.ai/",
+    "description": "Comprehensive open-source guide to prompt engineering. Covers techniques, applications, risks, and advanced strategies for all major LLMs.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "Microsoft Copilot Learning Path",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/training/paths/copilot/",
+    "description": "Learn to use Microsoft Copilot across Microsoft 365, GitHub, and Azure. Covers prompt engineering and AI-assisted workflows.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Information Technology & Computing"]
+  },
+  {
+    "title": "Google Responsible AI",
+    "provider": "Google",
+    "url": "https://ai.google/responsibility/responsible-ai-practices/",
+    "description": "Google's resources on responsible AI development. Covers fairness, interpretability, privacy, safety, and inclusive design.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "Google Gemini API Tutorials",
+    "provider": "Google",
+    "url": "https://ai.google.dev/tutorials",
+    "description": "Official tutorials for building with Google's Gemini API. Covers text generation, multimodal inputs, function calling, and embeddings.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Stability AI – Stable Diffusion Documentation",
+    "provider": "Stability AI",
+    "url": "https://platform.stability.ai/docs/getting-started",
+    "description": "Learn to use Stability AI's image generation models. Covers text-to-image, image-to-image, inpainting, and API integration.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Design & Creative"]
+  },
+  {
+    "title": "Mistral AI – Documentation & Guides",
+    "provider": "Mistral AI",
+    "url": "https://docs.mistral.ai/",
+    "description": "Learn to build with Mistral's open-weight LLMs. Covers API usage, fine-tuning, RAG, function calling, and deployment.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "Vertex AI Generative AI Learning Path",
+    "provider": "Google Cloud",
+    "url": "https://www.cloudskillsboost.google/paths/183",
+    "description": "Google Cloud's learning path for generative AI. Covers LLMs, responsible AI, prompt design, and Vertex AI Studio.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Cloud Computing"]
+  },
+  {
+    "title": "Azure AI Fundamentals – Generative AI",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/training/paths/introduction-generative-ai/",
+    "description": "Microsoft's learning path on generative AI fundamentals covering LLMs, Azure OpenAI Service, responsible AI, and prompt engineering.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Cloud Computing"]
+  },
+  {
+    "title": "AWS Generative AI Foundations",
+    "provider": "Amazon Web Services",
+    "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/17904/generative-ai-foundations-on-aws",
+    "description": "AWS fundamentals of generative AI covering LLMs, foundation models, Amazon Bedrock, and practical AI applications.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Cloud Computing"]
+  },
+  {
+    "title": "Hugging Face – Audio Course",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn/audio-course",
+    "description": "Learn audio processing with transformers. Covers speech recognition, text-to-speech, audio classification, and music generation.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML"]
+  },
+  {
+    "title": "Hugging Face – Diffusion Models Course",
+    "provider": "Hugging Face",
+    "url": "https://huggingface.co/learn/diffusion-course",
+    "description": "Learn diffusion models from scratch. Covers DDPM, stable diffusion, fine-tuning, and building pipelines.",
+    "certificate": true,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Design & Creative"]
+  },
+  {
+    "title": "TensorFlow Developer Certificate Prep",
+    "provider": "Google (TensorFlow)",
+    "url": "https://www.tensorflow.org/resources/learn-ml",
+    "description": "Free resources to learn TensorFlow for machine learning. Covers image classification, NLP, time series, and generative models.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "Programming Languages"]
+  },
+  {
+    "title": "MLflow – ML Lifecycle Management",
+    "provider": "Databricks (MLflow)",
+    "url": "https://mlflow.org/docs/latest/tutorials-and-examples/index.html",
+    "description": "Learn ML experiment tracking, model packaging, and deployment with MLflow. Free open-source tutorials and examples.",
+    "certificate": false,
+    "active": true,
+    "isAI": true,
+    "domains": ["AI & ML", "DevOps"]
   }
 ]
